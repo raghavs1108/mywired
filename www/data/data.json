@@ -12,7 +12,10 @@
               "timeStart": "8:00 am",
               "timeEnd": "9:00 am",
               "location": "Main hallway",
-              "tracks": ["Food"]
+              "tracks": ["Food"],
+              "details": "This is breakfast",
+              "imgUrl": "img/nin-live.png",
+              "hasImage": true
             }
           ]
         },

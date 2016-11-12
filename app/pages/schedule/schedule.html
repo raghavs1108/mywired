@@ -42,20 +42,24 @@
   <ion-list #scheduleList [hidden]="shownSessions === 0">
 
     <ion-item-group *ngFor="let group of groups" [hidden]="group.hide">
-
       <ion-item-divider sticky>
         {{group.type}}
       </ion-item-divider>
 
-      <ion-item-sliding *ngFor="let session of group.sessions" #slidingItem [attr.track]="session.tracks[0] | lowercase" [hidden]="session.hide">
+      <ion-item-sliding *ngFor="let session of group.sessions" [attr.track]="session.tracks[0] | lowercase" [hidden]="session.hide">
 
         <button ion-item (click)="goToSessionDetail(session)">
-          <h3>{{session.name}}</h3>
-          <p>
-            {{session.timeStart}} &mdash;
-            {{session.timeEnd}}:
-            {{session.location}}
-          </p>
+          <ion-card>
+            <ion-card-content>
+              <h2 style="padding-bottom: 5px">
+                {{session.name}}
+              </h2>
+              <img src="{{session.imgUrl}}" [hidden]="!session.hasImage"/>
+              <h3 style="padding-top: 5px">
+                {{session.details}}
+              </h3>
+            </ion-card-content>
+          </ion-card>
         </button>
 
         <ion-item-options>
