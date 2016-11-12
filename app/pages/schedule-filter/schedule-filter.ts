@@ -32,6 +32,7 @@ export class ScheduleFilterPage {
 
     this.trackNames = ["Events", "Careers", "Skills"]
 
+
     this.trackNames.forEach(track => {
         this.tracks.push({
           name: track,

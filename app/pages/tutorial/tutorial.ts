@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { MenuController, NavController } from 'ionic-angular';
 
 import { TabsPage } from '../tabs/tabs';
+import { SchedulePage } from '../schedule/schedule';
 
 
 interface Slide {
@@ -39,7 +40,7 @@ export class TutorialPage {
   }
 
   startApp() {
-    this.navCtrl.push(TabsPage);
+    this.navCtrl.setRoot(SchedulePage);
   }
 
   onSlideChangeStart(slider) {
