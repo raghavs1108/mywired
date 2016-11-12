@@ -9,6 +9,11 @@ import { LoginPage } from './pages/login/login';
 import { SignupPage } from './pages/signup/signup';
 import { TabsPage } from './pages/tabs/tabs';
 import { TutorialPage } from './pages/tutorial/tutorial';
+import { SessionsPage } from './pages/sessions/sessions';
+import { InterestsPage } from './pages/interests/interests';
+import { ProjectsPage } from './pages/projects/projects';
+import { SkillsPage } from './pages/skills/skills';
+import { EventsPage } from './pages/events/events';
 import { UserData } from './providers/user-data';
 
 interface PageObj {
@@ -32,18 +37,19 @@ class ConferenceApp {
   // the left menu only works after login
   // the login page disables the left menu
   appPages: PageObj[] = [
-    { title: 'Schedule', component: TabsPage, icon: 'calendar' },
-    { title: 'Speakers', component: TabsPage, index: 1, icon: 'contacts' },
-    { title: 'Map', component: TabsPage, index: 2, icon: 'map' },
-    { title: 'About', component: TabsPage, index: 3, icon: 'information-circle' },
+    { title: 'Home', component: EventsPage, icon: 'home' },
+    { title: 'Events', component: EventsPage, icon: 'calendar' },
+    { title: 'Sessions', component: SessionsPage, index: 1, icon: 'contacts' },
+    { title: 'Interests', component: InterestsPage, index: 2, icon: 'map' },
+    { title: 'Skills', component: SkillsPage, index: 2, icon: 'analytics' },
+    { title: 'Projects', component: ProjectsPage, index: 3, icon: 'albums' },
   ];
   loggedInPages: PageObj[] = [
-    { title: 'Account', component: AccountPage, icon: 'person' },
     { title: 'Logout', component: TabsPage, icon: 'log-out' }
   ];
   loggedOutPages: PageObj[] = [
-    { title: 'Login', component: LoginPage, icon: 'log-in' },
-    { title: 'Signup', component: SignupPage, icon: 'person-add' }
+    { title: 'Settings', component: TabsPage, icon: 'settings' },
+    { title: 'Logout', component: TabsPage, icon: 'log-out' }
   ];
   rootPage: any = LoginPage;
 

@@ -8,12 +8,13 @@
           "type": "Careers",
           "sessions": [
             {
-              "name": "Breakfast",
+              "name": "Javascript Developer",
               "timeStart": "8:00 am",
               "timeEnd": "9:00 am",
               "location": "Main hallway",
               "tracks": ["Food"],
-              "details": "This is breakfast",
+              "summary":"Required: JS Dev \n Company: Myntra\n Description: Javascript Developer of at least 5 years of experience required to manage client side application development",
+              "details": "Required: JS Dev \n Company: Myntra\n Description: Javascript Developer of at least 5 years of experience required to manage client side application development",
               "imgUrl": "img/nin-live.png",
               "hasImage": true
             }

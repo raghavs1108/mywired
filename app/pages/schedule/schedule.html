@@ -55,9 +55,11 @@
                 {{session.name}}
               </h2>
               <img src="{{session.imgUrl}}" [hidden]="!session.hasImage"/>
-              <h3 style="padding-top: 5px">
-                {{session.details}}
-              </h3>
+              <div>
+                <p style="padding-top: 5px; word-wrap: break-word;">
+                  {{session.details}}
+                </p>
+              </div>
             </ion-card-content>
           </ion-card>
         </button>
@@ -81,5 +83,13 @@
       No Sessions Found
   </ion-list-header>
 
-
+<ion-fab right bottom>
+    <button ion-fab color="light"><ion-icon name="arrow-dropleft"></ion-icon></button>
+    <ion-fab-list side="left">
+      <button ion-fab><ion-icon name="logo-facebook"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-twitter"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-vimeo"></ion-icon></button>
+      <button ion-fab><ion-icon name="logo-googleplus"></ion-icon></button>
+    </ion-fab-list>
+</ion-fab>
 </ion-content>

@@ -9,9 +9,9 @@ import { UserData } from '../../providers/user-data';
 
 
 @Component({
-  templateUrl: 'build/pages/events/events.html'
+  templateUrl: 'build/pages/skills/skills.html'
 })
-export class EventsPage {
+export class SkillsPage {
   // the list is a child of the schedule page
   // @ViewChild('scheduleList') gets a reference to the list
   // with the variable #scheduleList, `read: List` tells it to return
